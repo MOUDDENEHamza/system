@@ -1,0 +1,7 @@
+#!/bin/bash
+
+#Write a simple script that push this project on github.
+git add .
+read message
+git commit -m "$message"
+git push
