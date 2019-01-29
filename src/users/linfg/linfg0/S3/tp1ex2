@@ -1,0 +1,23 @@
+#!/bin/bash
+
+#Move to the main repository then display the current repository.
+cd ../../../
+pwd
+
+#Create the REP repository and SUBREP it repository in once command line.
+mkdir REP && cd REP && mkdir SUBREP
+
+#Copy liste.txt into SUBREP then display the content of this file.
+cd ../
+cp linfg/linfg0/S3/liste.txt REP/SUBREP/
+
+#Move to SUBREP repository then display the content of this repository.
+cd REP/SUBREP/ 
+ls
+
+#Move liste.txt from SUBREP to REP.
+mv liste.txt ../
+
+#Delete the REP repository and it contents.
+cd ../../
+rm -rf REP

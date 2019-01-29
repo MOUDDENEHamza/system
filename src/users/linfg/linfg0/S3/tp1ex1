@@ -1,0 +1,10 @@
+#!/bin/bash
+
+#Dislay all files containing .txt at the end.
+ls *.txt 
+
+#Display the next string using echo.
+echo
+echo "Le renard dit \"Oh, Monsieur du Corbeau\""
+echo "J'ai gagne \$100 a l'Alcazar"
+echo "Commentaire :  \\* Initialisation *\\"

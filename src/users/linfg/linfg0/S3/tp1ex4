@@ -1,0 +1,13 @@
+#!/bin/bash
+
+#Display the five last lines in liste.txt.
+tail -n -5 liste.txt
+
+#Display the content of liste.txt without the five first lines in liste.txt.
+tail -n +5 liste.txt
+
+#Output the first part of liste.txt without the last five lines.
+head -5 liste.txt
+
+#Output the first part of liste.txt.
+head liste.txt
