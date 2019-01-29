@@ -2,6 +2,6 @@
 
 #Write a simple script that push this project on github.
 git add .
-read message
+read -p "the message to commit : " message
 git commit -m "$message"
 git push
