@@ -1,0 +1,9 @@
+#!/bin/sh
+
+cd src/users/linfg/linfg0/S3/
+read -p "Wich TP do you want to execute : " tp_number
+echo "this is the list of exercices correspondent to this TP."
+ls tp${tp_number}ex*
+read -p "Wich exercise do you want to execute : " exercise_number
+echo
+./tp${tp_number}ex${exercise_number}
