@@ -1,5 +1,6 @@
 #!/bin/sh
 
+#This script build and execute the project.
 cd src/users/linfg/linfg0/S3/
 read -p "Wich TP do you want to execute : " tp_number
 echo "this is the list of exercices correspondent to this TP."
