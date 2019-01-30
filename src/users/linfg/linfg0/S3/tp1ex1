@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 #Dislay all files containing .txt at the end.
 ls *.txt 

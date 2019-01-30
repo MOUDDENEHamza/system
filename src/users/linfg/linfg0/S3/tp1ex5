@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 #Create the temp file.
 touch temp

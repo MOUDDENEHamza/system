@@ -1,14 +1,13 @@
-#!/bin/bash
+#!/bin/sh
 
 #Move to the main repository then display the current repository.
 cd ../../../
 pwd
 
 #Create the REP repository and SUBREP it repository in once command line.
-mkdir REP && cd REP && mkdir SUBREP
+mkdir -p REP/SUBREP
 
 #Copy liste.txt into SUBREP then display the content of this file.
-cd ../
 cp linfg/linfg0/S3/liste.txt REP/SUBREP/
 
 #Move to SUBREP repository then display the content of this repository.

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 #Write a simple script that push this project on github.
 git add .

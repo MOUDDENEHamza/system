@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 #Display the list of student who have the same name as LAURENT.
 grep 'LAURENT' liste.txt

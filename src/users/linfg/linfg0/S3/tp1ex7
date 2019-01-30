@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 #Create tdm01.txt and write tree string without using \n.
 echo 

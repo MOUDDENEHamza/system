@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 #Copy liste.txt from users/linfg/linfg0/S3/ repository to the main repository.
 cp liste.txt ../../../
