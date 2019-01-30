@@ -1,0 +1,30 @@
+#!/bin/bash
+
+#Create the temp file.
+touch temp
+
+#Sort the name that corresponds to number with one cipher.
+echo >> temp
+echo "----------------------Sort this file numerically----------------------" >> temp
+echo >> temp
+grep 'linfg[[:digit:]]$' liste.txt | sort -k 3 >> temp
+
+#Sort the name that corresponds to number with two cipher exactly.
+grep 'linfg[0-9][0-9]$' liste.txt | sort -k 3 >> temp
+
+#Sort the name that corresponds to number with tree cipher exactly.
+grep 'linfg[0-9][0-9][0-9]$' liste.txt | sort -k 3 >> temp
+
+#Sort this file alphabetically.
+echo >> temp
+echo "----------------------Sort this file alphabetically----------------------" >> temp
+echo >> temp
+sort liste.txt >> temp
+echo >> temp
+
+#Display the content of temp file.
+cat temp
+
+#Clear the exercise.
+read -p "to Clear the exercise and quit insert any key : " quit
+rm temp
