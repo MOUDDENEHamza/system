@@ -1,0 +1,33 @@
+#!/bin/bash
+
+#Create tdm01.txt and write tree string without using \n.
+echo 
+echo "Est-ce que j'arrive" >> tdm01.txt
+echo "a rediriger la" >> tdm01.txt
+echo "sortie standard ?" >> tdm01.txt
+
+#Display the content of tdm01.txt.
+cat tdm01.txt
+
+#Display the content of liste.txt.
+echo
+cat liste.txt
+
+#make the content of liste.txt into liste2.txt, it will be created then it will display the content of list.txt on this new file.
+cat liste.txt > liste2.txt
+
+#Remove liste2.txt.
+rm liste2.txt
+
+#Display the last five lines of liste.txt.
+echo
+cat liste.txt | tail -5
+
+#Display the lines between line 5 and 10 in liste.txt.
+echo
+sed -n 5,10p liste.txt
+
+#Clear the exercise.
+echo
+read -p "to Clear the exercise and quit press any key : " quit
+rm tdm01.txt
