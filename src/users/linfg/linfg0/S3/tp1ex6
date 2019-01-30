@@ -1,0 +1,10 @@
+#!/bin/bash
+
+#Display the list of student who have the same name as LAURENT.
+grep 'LAURENT' liste.txt
+
+#Display the list of student who have a number less than 100.
+grep -v "1[[:digit:]][[:digit:]]$" liste.txt
+
+#Display the list of student who have at least one digit 1.
+grep "1" liste.txt
