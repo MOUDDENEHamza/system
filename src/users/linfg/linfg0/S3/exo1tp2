@@ -1,0 +1,15 @@
+#! /bin/sh
+
+#Create a directory wich it name is passing on parameter then copy a file in the current repository to repository created.
+$REP1 = repository
+$FILE1 = dico.txt
+mkdir $REP
+cp ./$FILE $REP
+
+#Remove the files containing in the repository whose name is passed to the parameters.
+$REP2 = repository
+rm $REP2/*
+rm -rf $REP2
+
+
+
