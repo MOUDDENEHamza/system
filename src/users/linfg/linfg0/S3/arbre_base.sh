@@ -5,18 +5,18 @@
 echo "Start script ...\n"
 
 list() {
-	ls -d $1*/ | while read rep ; do
+	ls $1 | while read rep ; do
+		if [ -f $1$rep ]; then #Check if the is a file.
+			continue
+                fi
 		echo $rep 
-		list $1/$rep
+		rep=$rep/
+		if [ -z "$(ls $1$rep)" ]; then #Check if the directory is empty.
+                        continue
+                fi
+		list $1$rep
 	done
-	echo
 }
 
-while [ 1 = 1 ] ; do
-	read -p "Turn : " turn
-	echo
-	list $1
-done
-
+list $1
 echo "\nEnd script ..."
-
