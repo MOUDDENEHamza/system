@@ -1,22 +1,24 @@
 #!/bin/sh
 
-#Display all the subrepositories of a given repository in parameter.
+if [ $# -ne 1 ] ; then
+	echo "ERROR : Wrong usage\nUsage : $0 repository_name" >&2
+	exit 1
+fi
 
-echo "Start script ...\n"
+if [ -d "$1" -a ! -x "$1" -a ! -r "$1" ] ; then 
+	echo "ERROR : Permission denied" >&2
+        exit 2
+fi
 
-list() {
-	ls $1 | while read rep ; do
-		if [ -f $1$rep ]; then #Check if the is a file.
+for rep in "$1"/* ; do
+	if [ -d "$rep" ] ; then
+		basename "$rep"
+		"$0" "$rep"
+	else
+		if [ -f "$rep" ] ; then
 			continue
-                fi
-		echo $rep 
-		rep=$rep/
-		if [ -z "$(ls $1$rep)" ]; then #Check if the directory is empty.
-                        continue
-                fi
-		list $1$rep
-	done
-}
+		fi
+	fi
+done
 
-list $1
-echo "\nEnd script ..."
+exit 0
